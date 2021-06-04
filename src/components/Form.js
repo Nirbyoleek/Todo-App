@@ -11,7 +11,11 @@ const Form = ({ inputText, setInputText, todos, setTodos }) => {
     e.preventDefault();
     setTodos([
       ...todos,
-      { text: inputText, id: inputText + Math.floor(Math.random() * 100) },
+      {
+        text: inputText,
+        id: inputText + Math.floor(Math.random() * 100),
+        completed: false,
+      },
     ]);
     setInputText("");
     setType(false);

@@ -9,7 +9,7 @@ hsl(233, 14%, 35%) */
 
 * {
   font-family: "Josefin Sans", sans-serif;
-  color: black;
+  color: hsl(236, 33%, 92%);
   font-size: 18px;
 }
 .Head {
@@ -57,14 +57,23 @@ hsl(233, 14%, 35%) */
 #label {
   color: hsl(234, 11%, 52%);
 }
-.TodoList {
+.MainList {
   background-color: hsl(237, 14%, 26%);
 
-  width: 35vw;
+  width: 40vw;
   margin-left: 34vw;
   margin-top: -5vw;
   min-height: 40vh;
   border-radius: 10px;
+  color: aliceblue;
+}
+.TodoList {
+  height: 37vh;
+  overflow: scroll;
+}
+.TodoList2 {
+  display: flex;
+  justify-content: space-between;
 }
 .Todo {
   display: flex;
@@ -73,18 +82,50 @@ hsl(233, 14%, 35%) */
   margin: 4vh 0 4vh -2vw;
   padding: 1vh;
 }
-#Item {
+.Item {
   margin-left: -10vw;
   color: hsl(234, 11%, 52%);
 }
-#Item-comp {
-  /* text-decoration: line-through; */
+.completed {
+  text-decoration: line-through;
   color: hsl(234, 11%, 52%);
-  margin-left: -15vw;
 }
-.butItems {
+.Buttons {
   border: 0;
   background-color: hsl(237, 14%, 26%);
   color: hsl(234, 11%, 52%);
-  align-items: flex-end;
+  font-weight: 600;
+}
+.Buttons:hover {
+  color: hsl(234, 39%, 85%);
+  cursor: pointer;
+}
+.Status {
+  position: fixed;
+}
+#ItemsLength {
+  color: hsl(234, 11%, 52%);
+  font-weight: 600;
+}
+#ItemsLength:hover {
+  color: hsl(234, 39%, 85%);
+  cursor: pointer;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px hsl(237, 14%, 26%);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: hsl(234, 11%, 52%);
+}
+::-webkit-scrollbar-corner {
+  background-color: hsl(237, 14%, 26%);
 }
